@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Shopee - Tenis Maculino Esportivo Velocity Nitro</title>
+</head>
+<body>
+
+    <nav id="menu_h">
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Produtos</a></li>
+        <li><a href="#">Carrinho</a></li>
+        <li><a href="#">Sobre Nós</a></li>
+        <li><a href="#">Login</a></li>
+    </ul>
+    </nav>
+
+   <div class="container">
+       <div class="product">
+           <div class="image">
+               <img class="product-image" src="images/white.jpg" alt="">
+           </div>
+           <div class="color">
+               <span class="orange active" data-image="images/white.jpg" data-color="#00BFFF"></span>
+               <span class="green" data-image="images/green_alt.jpg" data-color="#C0C0C0"></span>
+               <span class="black" data-image="images/black_alt.jpg" data-color="#222627"></span>
+               <span class="red" data-image="images/yellow.jpg" data-color="#FFA500"></span>
+           </div>
+           <div class="title">
+               Tenis Masculino Esportivo Velocity Nitro
+           </div>
+           <div class="detail">
+               <p>Preço : <span>R$50,00</span></p>
+               <a href="#">Adicionar ao carrinho</a>
+           </div>
+       </div>
+   </div>
+
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+   <script>
+       $(".color span").click(function(){
+
+        $(".color span").removeClass("active");
+        $(this).addClass("active");
+        $(".detail span").css("color",$(this).attr("data-color"));
+        $(".detail a").css("background",$(this).attr("data-color"));
+        $(".product-image").attr("src",$(this).attr("data-image"));
+        $("body").css("background",$(this).attr("data-color"));
+       });
+   </script>
+
+</body>
+</html>
